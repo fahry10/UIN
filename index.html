@@ -6,7 +6,8 @@
 <title>A Letter — For You</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Alex+Brush&family=Caveat:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Mengimpor Font Tinos & Playfair Display yang identik dengan Times New Roman agar bisa dibaca HP -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Caveat:wght@400;500;600&family=Poppins:wght@300;400;500;600&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
 <!-- ============================================================
      KONFIGURASI SURAT — ubah bagian ini untuk personalisasi
@@ -166,7 +167,6 @@
   .floral-bloom.bloom-in{ opacity:1; }
   .floral-bloom.bloom-out{ opacity:0; transition: opacity .8s ease; }
 
-  /* each flower/leaf pops open individually, staggered, like real blooms unfurling */
   .bloom-pop{
     opacity:0; transform-box:fill-box; transform-origin:center;
     animation: popBloom .65s cubic-bezier(.34,1.56,.64,1) both;
@@ -248,7 +248,7 @@
     letter-spacing:4px; color:var(--ink-soft); font-weight:500; margin-bottom:4px;
   }
   .env-plate .to-name{
-    display:block; font-family:'Times new roman', serif !important; font-size:30px; color:var(--ink); line-height:1;
+    display:block; font-family:'Tinos', 'Times New Roman', serif !important; font-size:30px; color:var(--ink); line-height:1;
   }
 
   .tap-hint{
@@ -307,7 +307,7 @@
   }
 
   .letter-title{
-    text-align:center; font-family:'Cormorant Garamond', serif; font-style:italic;
+    text-align:center; font-family:'Tinos', 'Times New Roman', serif !important; font-style:italic;
     font-weight:500; font-size:clamp(30px,7vw,42px); margin:0 0 14px; color:var(--ink);
     opacity:0; transform:translateY(10px); transition:opacity .7s ease, transform .7s ease;
   }
@@ -326,7 +326,7 @@
   .letter-date.in{opacity:1;}
 
   .letter-dearest{
-    font-family:'Times new roman', serif !important; font-size:clamp(30px,7vw,40px); color:var(--ink);
+    font-family:'Tinos', 'Times New Roman', serif !important; font-size:clamp(30px,7vw,40px); color:var(--ink);
     margin:0 0 6px; line-height:1;
     opacity:0; transform:translateY(8px); transition:opacity .6s ease, transform .6s ease;
   }
@@ -335,7 +335,7 @@
   .dearest-rule.in{opacity:1;}
 
   .letter-body{
-    font-family:'Playfair Display', cursive; font-size:clamp(18px,4.6vw,21px); line-height:1.85;
+    font-family:'Playfair Display', serif !important; font-size:clamp(17px,4.2vw,20px); line-height:1.85;
     color:#463a35; white-space:pre-wrap; min-height:2em;
   }
   .letter-body .cursor{ display:inline-block; width:2px; background:var(--ink-soft); margin-left:1px;
@@ -346,10 +346,10 @@
     margin-top:30px; text-align:right; opacity:0; transition:opacity .8s ease;
   }
   .letter-signature.in{opacity:1;}
-  .letter-signature .closing{ font-family:'Playfair Display',cursive; font-size:19px; color:#463a35; margin:0 0 2px; }
-  .letter-signature .signer{ font-family:'Playfair Display',cursive; font-size:19px; color:#463a35; margin:0 0 10px; }
+  .letter-signature .closing{ font-family:'Playfair Display', serif !important; font-style:italic; font-size:18px; color:#463a35; margin:0 0 2px; }
+  .letter-signature .signer{ font-family:'Playfair Display', serif !important; font-style:italic; font-size:18px; color:#463a35; margin:0 0 10px; }
   .letter-signature .script{
-    font-family:'Times new roman', serif !important; font-size:32px; color:var(--ink); display:inline-block;
+    font-family:'Tinos', 'Times New Roman', serif !important; font-size:30px; color:var(--ink); display:inline-block;
     border-bottom:1px solid #cfc2b8; padding-bottom:4px;
   }
 
@@ -377,9 +377,7 @@
 <div id="hearts-bg"></div>
 <div class="floral-bloom" id="floralBloom"></div>
 
-<!-- ============================================================
-     ELEMEN AUDIO (Ganti "lagu1.mp3" & "lagu2.mp3" sesuai file lagu kamu)
-     ============================================================ -->
+<!-- ELEMEN AUDIO -->
 <audio id="bgMusic1" src="lagu1.mp3" preload="auto"></audio>
 <audio id="bgMusic2" src="lagu2.mp3" preload="auto"></audio>
 
@@ -476,43 +474,38 @@
   setInterval(spawnHeart, 550);
   for(let i=0;i<10;i++) setTimeout(spawnHeart, i*300);
 
-  // ---------- fullscreen floral bloom (real petal-shaped flowers, original generated artwork) ----------
+  // ---------- fullscreen floral bloom ----------
   function rnd(min,max){ return Math.random()*(max-min)+min; }
   function pick(arr){ return arr[Math.floor(rnd(0,arr.length))]; }
 
-  // one petal silhouette, tip pointing "up" from the flower's own center (0,0)
   const PETAL_D = "M0,0 C-2.5,-1.8 -2.9,-5.6 0,-7.8 C2.9,-5.6 2.5,-1.8 0,0 Z";
 
   const PALETTES = [
-    { outer:'#d8607f', mid:'#e98aa4', inner:'#fbe3dd' },   // deep rose
-    { outer:'#e0708f', mid:'#f0a3b8', inner:'#fff3ee' },   // pink
-    { outer:'#c9506f', mid:'#e07a9c', inner:'#f6e0cf' },   // magenta-cream
-    { outer:'#eec9ce', mid:'#f8e2df', inner:'#fffaf6' },   // blush white
+    { outer:'#d8607f', mid:'#e98aa4', inner:'#fbe3dd' },   
+    { outer:'#e0708f', mid:'#f0a3b8', inner:'#fff3ee' },   
+    { outer:'#c9506f', mid:'#e07a9c', inner:'#f6e0cf' },   
+    { outer:'#eec9ce', mid:'#f8e2df', inner:'#fffaf6' },   
   ];
 
   function buildFlower(cx,cy,scale,delayMs){
     const pal = pick(PALETTES);
-    const petals = 6 + Math.floor(rnd(0,3));       // 6-8 outer petals
+    const petals = 6 + Math.floor(rnd(0,3));       
     const rot = rnd(0,360);
 
     let inner = `<g class="bloom-pop" style="animation-delay:${delayMs.toFixed(0)}ms">`;
-    // back layer - outer petals
     for(let i=0;i<petals;i++){
       const a = (360/petals)*i;
       inner += `<path transform="rotate(${a.toFixed(1)})" d="${PETAL_D}" fill="${pal.outer}" opacity=".95"/>`;
     }
-    // mid layer - offset + smaller
     for(let i=0;i<petals;i++){
       const a = (360/petals)*i + (360/petals)/2;
       inner += `<path transform="rotate(${a.toFixed(1)}) scale(.62)" d="${PETAL_D}" fill="${pal.mid}" opacity=".95"/>`;
     }
-    // inner layer - small cream/light petals near center
     const innerPetals = petals - 2;
     for(let i=0;i<innerPetals;i++){
       const a = (360/innerPetals)*i + rnd(-8,8);
       inner += `<path transform="rotate(${a.toFixed(1)}) scale(.32)" d="${PETAL_D}" fill="${pal.inner}" opacity=".95"/>`;
     }
-    // stamens / center flecks
     for(let i=0;i<5;i++){
       inner += `<circle cx="${rnd(-.6,.6).toFixed(2)}" cy="${rnd(-.6,.6).toFixed(2)}" r="${rnd(.35,.55).toFixed(2)}" fill="#dd9a35"/>`;
     }
@@ -536,7 +529,6 @@
       for(let c=0;c<cols;c++){
         const cx = (c/(cols-1))*100 + rnd(-7,7);
         const cy = (r/(rows-1))*180 + rnd(-9,9);
-        // diagonal sweep so flowers bloom in a wave across the screen, like the video
         const wave = (r/(rows-1) + c/(cols-1)) * 520;
         const delay = wave + rnd(0,140);
         if(Math.random() < .35) flowers += buildLeaf(cx+rnd(-3,3),cy+rnd(-3,3), rnd(1.4,2.2), rnd(0,360), delay);
@@ -549,7 +541,6 @@
 
   document.getElementById('floralBloom').innerHTML = buildFloralField();
 
-  // small static flower clusters that sit behind the letter card in each corner
   function buildCornerCluster(){
     let g = '';
     const spots = [
@@ -593,31 +584,25 @@
     if(envelope.classList.contains('open')) return;
     envelope.classList.add('open');
 
-    // Mulaikan lagu tepat saat amplop diklik
     startMusic();
 
-    // 1) envelope flap opens, cover fades away
     setTimeout(()=>{ cover.classList.add('leaving'); }, 550);
 
-    // 2) cover hidden, fullscreen flowers bloom in
     setTimeout(()=>{
       cover.style.display = 'none';
       floralBloom.style.display = 'block';
       requestAnimationFrame(()=> floralBloom.classList.add('bloom-in'));
 
-      // prepare letter screen underneath while flowers cover it
       letterScreen.classList.add('show');
       requestAnimationFrame(()=> letterScreen.classList.add('visible'));
     }, 1250);
 
-    // 3) hold the fully-bloomed field for a beat, then fade it out to reveal the letter
     const BLOOM_HOLD = 1250 + 1900 + 500;
     setTimeout(()=>{
       floralBloom.classList.remove('bloom-in');
       floralBloom.classList.add('bloom-out');
     }, BLOOM_HOLD);
 
-    // 4) flowers fully gone -> start the letter's own reveal sequence
     setTimeout(()=>{
       floralBloom.style.display = 'none';
       window.scrollTo(0,0);
@@ -692,4 +677,4 @@
   });
 </script>
 </body>
-</html>   
+</html>
