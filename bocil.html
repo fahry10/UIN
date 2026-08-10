@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>A Letter — For You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Alex+Brush&family=Caveat:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     KONFIGURASI SURAT — ubah bagian ini untuk personalisasi
+     ============================================================ -->
+<script>
+  const LETTER_CONFIG = {
+    forLabel: "FOR",
+    recipient: "My Bocilll",              // nama di sampul amplop
+    letterTitle: "Memberikan Semangat",       // judul surat
+    date: "10 Agustus 2026",
+    dearest: "Buattt Pacar Aku yanng imutt",
+    paragraphs: [
+      "Sayang, sebelum kamu baca semuanya, aku cuma mau kamu baca ini pelan-pelan sampai selesai. Aku nulis ini bukan karena aku mau ninggalin kamu, bukan juga karena aku udah capek sama hubungan kita. Justru karena aku masih sayang dan masih pengen kita bertahan, aku pengen ngomongin semuanya yang selama ini pernah kita lewatin.",
+      "Kita kenal dan mulai bareng dari tahun 2024 sampai sekarang 2026. Kalau dipikir-pikir, perjalanan kita ternyata nggak sebentar. Banyak banget hal yang udah kita lewatin. Ada bahagianya, ada ketawanya, ada rasa nyaman, tapi nggak sedikit juga air mata, marah, kecewa, salah paham, bahkan sampai hampir kehilangan satu sama lain.",
+      "Aku juga sadar, selama hubungan kita, aku bukan cowok yang selalu bisa bikin kamu bahagia. Aku pernah melakukan kesalahan yang mungkin sampai sekarang masih membekas di hati kamu. Aku pernah selingkuh, dan aku tahu itu bukan kesalahan kecil. Aku tahu aku pernah bikin kepercayaan kamu rusak dan bikin kamu bertanya-tanya apakah aku benar-benar bisa berubah atau nggak. Bahkan waktu itu hubungan kita hampir selesai. Tapi kamu memilih untuk tetap mempertahankan kita, sementara orang yang waktu itu bersamaku akhirnya memilih mundur.",
+      "Sampai sekarang aku masih bersyukur kamu pernah memilih untuk bertahan. Tapi di sisi lain, aku juga sadar bahwa pilihan kamu untuk bertahan bukan berarti aku boleh menganggap semua kesalahan itu selesai begitu saja. Aku harus belajar dari semuanya.",
+      "Kita juga pernah sampai di titik putus dan lost contact. Waktu itu rasanya aneh banget karena orang yang biasanya ada tiba-tiba nggak ada. Tapi ternyata setelah semua itu, kita masih dipertemukan lagi dan memilih untuk bersama lagi. Dari situ aku sadar, mungkin hubungan kita memang banyak ujiannya, tapi selalu ada alasan kenapa kita masih kembali satu sama lain.",
+      "Kita pernah berantem gara-gara pertemanan, gara-gara salah paham, gara-gara hal-hal kecil yang akhirnya jadi besar karena kita sama-sama terbawa emosi. Sampai ada kejadian kita ketahuan waktu aku datang ke rumah kamu. Ada tetangga yang melihat, ada CCTV di RT, sampai akhirnya Pak RT tahu dan mamah kamu juga tahu. Kita berdua akhirnya kena omel. Aku juga akhirnya ketahuan sama orang tuaku sendiri karena sebenarnya aku memang belum diperbolehkan pacaran.",
+      "Jujur, kalau mengingat kejadian-kejadian itu sekarang, kadang aku malu, kadang sedih, tapi di sisi lain aku juga sadar kalau semua itu adalah bagian dari perjalanan kita. Kita pernah sama-sama melakukan kesalahan, pernah sama-sama keras kepala, pernah sama-sama mempertahankan ego, tapi kita juga pernah sama-sama berusaha memperbaiki semuanya.",
+      "Dan sekarang keadaan kita berubah lagi.",
+      "Kamu harus pergi ke Pekalongan untuk kuliah di UIN, sementara aku tetap di Bekasi dan juga harus menjalani kuliahku, projek-projek akhir, sampai skripsi. Yang biasanya kita bisa ketemu karena rumah kita dekat, sekarang jaraknya jauh banget. Dulu kalau kangen mungkin tinggal ketemu, sekarang kalau kangen paling cuma bisa video call, chat, atau telepon.",
+      "Aku nggak akan bohong kalau aku bilang aku takut.",
+      "Aku takut kamu merasa sendirian ketika aku sibuk. Aku takut ketika aku sedang mengerjakan projek, tugas akhir, atau skripsi sampai nggak bisa nemenin kamu, kamu merasa aku sudah nggak peduli. Aku takut kamu mencari orang lain untuk menemani kamu karena aku nggak bisa ada di samping kamu secara langsung.",
+      "Tapi aku juga ingin kamu mengerti satu hal.",
+      "Kesibukanku bukan berarti rasa sayangku berkurang.",
+      "Kalau suatu saat aku lama membalas chat, bukan berarti aku sedang bosan sama kamu. Kalau aku sedang sibuk dengan tugas atau skripsi, bukan berarti aku sudah menemukan orang lain. Kalau aku sedang capek dan tidak banyak bicara, bukan berarti aku ingin menjauh.",
+      "Aku cuma sedang berusaha menyelesaikan apa yang harus aku selesaikan supaya suatu hari nanti aku bisa berdiri sebagai seseorang yang lebih baik untuk diriku sendiri dan juga untuk kamu.",
+      "Dan aku juga mau meminta hal yang sama dari kamu.",
+      "Tolong, selama kita menjalani LDR ini, jangan cari orang lain hanya karena aku sedang tidak bisa menemani kamu. Jangan menjadikan kesepian sebagai alasan untuk memberikan kesempatan kepada orang lain masuk ke hubungan kita. Kalau kamu merasa kesepian, bilang ke aku. Kalau kamu merasa kurang diperhatikan, bilang ke aku. Kalau kamu marah, bilang. Kalau kamu kecewa, bilang. Jangan dipendam sampai akhirnya kamu mencari tempat nyaman di orang lain.",
+      "Aku nggak meminta kamu untuk selalu kuat. Aku cuma meminta kamu untuk tetap jujur sama aku.",
+      "Kalau nanti ada cowok yang datang dan memberikan perhatian lebih daripada aku ketika aku sedang sibuk, aku harap kamu ingat bahwa aku juga sedang berjuang di tempatku. Jangan bandingkan aku dengan orang yang hanya hadir ketika aku sedang tidak bisa hadir. Karena aku ingin kita sama-sama belajar bahwa hubungan itu bukan cuma tentang siapa yang selalu ada setiap waktu, tapi tentang siapa yang tetap memilih bertahan ketika keadaan sedang nggak mudah.",
+      "Dan aku juga berjanji kepada kamu, aku nggak mau mengulangi kesalahan-kesalahan yang dulu pernah aku lakukan.",
+      "Aku nggak mau ada selingkuh lagi. Aku nggak mau ada kebohongan lagi. Aku nggak mau ada orang ketiga lagi. Aku nggak mau kita berantem karena hal yang sebenarnya bisa diselesaikan kalau kita mau ngomong baik-baik.",
+      "Aku ingin lembaran baru ini benar-benar menjadi lembaran baru.",
+      "Bukan berarti kita melupakan semua masa lalu seolah-olah nggak pernah terjadi. Justru kita mengingat semuanya sebagai pelajaran supaya kita nggak mengulanginya lagi.",
+      "Aku ingin kita yang sekarang bukan lagi kita yang dulu.",
+      "Kita yang dulu mungkin gampang marah, gampang salah paham, gampang terbawa emosi, dan kadang mengambil keputusan ketika sedang marah. Tapi aku berharap kita yang sekarang bisa lebih dewasa. Kalau ada masalah, kita bicarakan. Kalau ada rasa cemburu, kita jelaskan. Kalau ada sesuatu yang mengganggu pikiran, jangan langsung menuduh. Kalau salah satu dari kita sedang sibuk, yang satu belajar mengerti.",
+      "Aku juga nggak mau LDR ini menjadi akhir dari hubungan kita.",
+      "Aku ingin LDR ini menjadi bagian dari perjalanan kita untuk tumbuh masing-masing tanpa kehilangan satu sama lain.",
+      "Kamu sekarang punya dunia baru di Pekalongan. Kamu akan bertemu banyak orang baru, punya teman baru, lingkungan baru, pengalaman baru, dan mungkin banyak hal yang belum pernah kamu rasakan sebelumnya. Aku ingin kamu menikmati semuanya. Belajarlah yang rajin, kejar cita-cita kamu, jangan takut untuk berkembang, dan jangan merasa bahwa hubungan kita harus membuat kamu berhenti mengejar masa depanmu.",
+      "Aku akan senang melihat kamu berhasil.",
+      "Kalau nanti kamu capek dengan kuliah, cerita ke aku. Kalau kamu dapat nilai bagus, cerita ke aku. Kalau kamu punya masalah sama teman, cerita ke aku. Kalau kamu sedang sedih, jangan merasa harus menghadapinya sendirian. Walaupun aku jauh, aku tetap ingin menjadi tempat kamu pulang untuk bercerita.",
+      "Dan aku juga ingin kamu tahu, aku akan berusaha melakukan hal yang sama.",
+      "Aku mungkin nggak selalu bisa ada setiap saat. Mungkin nanti ada hari di mana aku benar-benar sibuk dengan projek, tugas akhir, atau skripsi. Tapi aku akan berusaha untuk tetap memberikan kabar. Aku akan berusaha supaya kamu nggak merasa ditinggalkan.",
+      "Aku nggak bisa menjanjikan hubungan kita akan selalu baik-baik saja. Pasti akan ada masalah lagi. Pasti akan ada salah paham lagi. Kita manusia, bukan dua orang yang sempurna.",
+      "Tapi aku bisa berjanji satu hal.",
+      "Kalau nanti masalah datang, aku ingin kita memilih untuk memperbaikinya, bukan langsung meninggalkannya.",
+      "Aku ingin kita belajar dari semua yang pernah terjadi.",
+      "Tentang aku yang pernah selingkuh.",
+      "Tentang kita yang pernah putus.",
+      "Tentang kita yang pernah lost contact.",
+      "Tentang pertemanan yang pernah membuat kita salah paham.",
+      "Tentang kejadian di rumah kamu yang sampai membuat orang tua kita tahu.",
+      "Tentang semua pertengkaran yang pernah membuat kita merasa capek.",
+      "Semua itu cukup menjadi masa lalu.",
+      "Aku nggak mau kita membawa luka lama ke hubungan yang baru.",
+      "Jadi anggaplah pesan ini sebagai perpisahan.",
+      "Tapi bukan perpisahan antara aku dan kamu.",
+      "Ini adalah perpisahan dengan hubungan kita yang dulu.",
+      "Aku ingin mengucapkan selamat tinggal kepada semua kebiasaan buruk kita, semua kesalahan kita, semua ego kita, semua kebohongan, semua orang ketiga, semua pertengkaran yang nggak perlu, dan semua hal yang pernah membuat kita hampir kehilangan satu sama lain.",
+      "Setelah ini, aku ingin kita mulai lagi.",
+      "Masih dengan orang yang sama.",
+      "Masih dengan rasa sayang yang sama.",
+      "Tapi dengan cara mencintai yang lebih dewasa.",
+      "Aku nggak tahu sampai kapan perjalanan kita akan berlangsung. Aku nggak tahu apa yang akan terjadi selama kita LDR. Tapi untuk sekarang, aku masih ingin memilih kamu.",
+      "Dan aku berharap kamu juga masih memilih aku.",
+      "Jaga diri kamu baik-baik di sana. Jangan lupa makan, jangan terlalu memaksakan diri kalau capek, dan jangan lupa tujuan kamu pergi ke Pekalongan adalah untuk belajar dan mengejar masa depan kamu.",
+      "Kalau suatu hari kamu merasa jauh dariku, lihat lagi semua yang sudah kita lewati. Kita sudah pernah kehilangan satu sama lain, tapi kita masih bisa kembali. Kita sudah pernah hampir selesai, tapi kita masih memilih bertahan.",
+      "Mungkin sekarang ujian kita bukan lagi tentang jarak rumah, tapi tentang jarak antara Bekasi dan Pekalongan.",
+      "Dan aku ingin kita melewati ujian itu bersama-sama.",
+      "Aku sayang kamu.",
+      "Maaf untuk semua kesalahan yang pernah aku buat. Maaf kalau selama ini aku pernah membuat kamu merasa nggak cukup dicintai. Maaf kalau kesibukanku nanti membuat kamu merasa sendirian. Tapi tolong, jangan cari pengganti hanya karena aku sedang tidak bisa menemani.",
+      "Tunggu aku, seperti aku juga akan berusaha menunggu kamu.",
+      "Kalau ada masalah, ayo kita bicarakan.",
+      "Kalau kangen, ayo kita bilang.",
+      "Kalau marah, ayo kita selesaikan.",
+      "Kalau takut kehilangan, ayo kita saling meyakinkan.",
+      "Jangan saling mencari orang lain ketika kita sedang kesulitan.",
+      "Karena aku ingin suatu hari nanti ketika kita melihat kembali tahun 2026 ini, kita bisa bilang:",
+      "“Dulu kita pernah takut LDR bakal menghancurkan hubungan kita, tapi ternyata kita berhasil melewatinya.”",
+      "Semangat kuliahnya, sayang.",
+      "Kejar semua cita-cita kamu. Jadilah perempuan yang kamu inginkan. Aku akan berusaha mengejar cita-citaku juga di sini.",
+      "Kita jalan masing-masing untuk sementara, tapi jangan sampai tujuan kita membuat kita lupa bahwa kita sedang berjuang untuk hubungan yang sama.",
+      "Aku nggak mau bilang “selamat tinggal kamu”.",
+      "Aku cuma mau bilang:",
+      "Selamat tinggal hubungan kita yang dulu.",
+      "Dan selamat datang di hubungan kita yang baru.",
+      "Semoga kali ini kita lebih dewasa.",
+      "Lebih jujur.",
+      "Lebih sabar.",
+      "Lebih saling mengerti.",
+      "Dan yang paling penting, semoga nggak ada lagi orang ketiga di antara kita.",
+      "Aku sayang kamu, dan aku masih memilih kamu. ❤️"
+    ],
+    closing: "Penuh cinta dan kasih sayang,",
+    signer: "Fahry",
+    signature: "KAMUUU PACARKUUU"
+  };
+</script>
+<!-- ============================================================ -->
+
+<style>
+  :root{
+    --blush-1:#fdf1ee;
+    --blush-2:#f9e2de;
+    --blush-3:#f3c9ce;
+    --paper:#fffaf6;
+    --paper-edge:#f3e6de;
+    --ink:#3a2f2c;
+    --ink-soft:#6b5a54;
+    --gold:#c9a24d;
+    --gold-dim:#d9c393;
+    --maroon:#a6415a;
+    --seal:#b5492f;
+    --seal-dark:#8f3722;
+    --shadow: 0 20px 60px -20px rgba(120,60,60,.35);
+  }
+
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{
+    margin:0; padding:0; min-height:100%;
+    background: radial-gradient(120% 100% at 50% 0%, var(--blush-1), var(--blush-2) 60%, var(--blush-3) 130%);
+    font-family:'Poppins',sans-serif;
+    color:var(--ink);
+    overflow-x:hidden;
+  }
+
+  /* ---------- floating hearts / petals ambient bg ---------- */
+  #hearts-bg{
+    position:fixed; inset:0; pointer-events:none; z-index:1; overflow:hidden;
+  }
+  .heart{
+    position:absolute; bottom:-10%; opacity:0;
+    color: var(--seal);
+    filter: drop-shadow(0 2px 4px rgba(180,80,90,.25));
+    animation-name: floatUp;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
+  .heart svg{ width:100%; height:100%; display:block; }
+  @keyframes floatUp{
+    0%{ transform: translateY(0) translateX(0) rotate(0deg); opacity:0; }
+    8%{ opacity:.55; }
+    50%{ transform: translateY(-55vh) translateX(var(--drift,20px)) rotate(15deg); }
+    92%{ opacity:.35; }
+    100%{ transform: translateY(-108vh) translateX(calc(var(--drift,20px) * -1)) rotate(-10deg); opacity:0; }
+  }
+
+  /* ---------- fullscreen floral bloom transition ---------- */
+  .floral-bloom{
+    position:fixed; inset:0; z-index:6; display:none;
+    opacity:0;
+    transition: opacity .5s ease;
+    pointer-events:none;
+  }
+  .floral-bloom svg{ width:100%; height:100%; display:block; }
+  .floral-bloom.bloom-in{ opacity:1; }
+  .floral-bloom.bloom-out{ opacity:0; transition: opacity .8s ease; }
+
+  /* each flower/leaf pops open individually, staggered, like real blooms unfurling */
+  .bloom-pop{
+    opacity:0; transform-box:fill-box; transform-origin:center;
+    animation: popBloom .65s cubic-bezier(.34,1.56,.64,1) both;
+  }
+  @keyframes popBloom{
+    0%{ opacity:0; transform:scale(.15) rotate(-8deg); }
+    70%{ opacity:1; }
+    100%{ opacity:1; transform:scale(1) rotate(0deg); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .bloom-pop{ animation:none; opacity:1; transform:none; }
+  }
+
+  /* =========================================================
+     COVER / ENVELOPE SCREEN
+     ========================================================= */
+  #cover{
+    position:relative; z-index:2;
+    min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:8vh 6vw; text-align:center;
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  #cover.leaving{ opacity:0; transform: scale(.92); pointer-events:none; }
+
+  .envelope-wrap{ cursor:pointer; user-select:none; perspective:1200px; }
+
+  .envelope{
+    position:relative; width:min(78vw,320px); height:min(62vw,255px);
+    margin:0 auto;
+    animation: envFloat 4.5s ease-in-out infinite;
+  }
+  @keyframes envFloat{
+    0%,100%{ transform: translateY(0px); }
+    50%{ transform: translateY(-10px); }
+  }
+
+  .env-body{
+    position:absolute; inset:0;
+    background: linear-gradient(160deg, #f7e9e2, #f0dcd2);
+    border:1px solid #ecd9cd;
+    border-radius:6px;
+    box-shadow: var(--shadow);
+    background-image:
+      radial-gradient(rgba(180,140,120,.06) 1px, transparent 1px);
+    background-size:6px 6px;
+  }
+  .env-flap{
+    position:absolute; top:0; left:0; width:100%; height:62%;
+    background: linear-gradient(160deg, #f3ded4, #ecd3c6);
+    clip-path: polygon(0 0, 100% 0, 50% 78%);
+    border-radius:6px 6px 0 0;
+    transform-origin: top center;
+    transition: transform .8s cubic-bezier(.6,.05,.2,1);
+    z-index:3;
+  }
+  .envelope.open .env-flap{ transform: rotateX(180deg); }
+
+  .wax-seal{
+    position:absolute; left:50%; top:38%; transform:translate(-50%,-50%);
+    width:58px; height:58px; border-radius:50%;
+    background: radial-gradient(circle at 32% 30%, #d3714f, var(--seal) 55%, var(--seal-dark) 100%);
+    box-shadow: 0 6px 14px rgba(140,50,30,.4), inset 0 0 0 3px rgba(255,255,255,.08);
+    display:flex; align-items:center; justify-content:center;
+    z-index:4; transition: opacity .4s ease, transform .4s ease;
+  }
+  .wax-seal::before{
+    content:"✦"; color:#f6ddc9; font-size:20px; text-shadow:0 1px 1px rgba(0,0,0,.25);
+  }
+  .envelope.open .wax-seal{ opacity:0; transform:translate(-50%,-50%) scale(.4); }
+
+  .env-plate{
+    position:absolute; left:50%; bottom:14%; transform:translateX(-50%);
+    width:72%; background:#fffdfb;
+    box-shadow:0 8px 18px rgba(120,70,60,.18);
+    border-radius:2px; padding:10px 8px 12px; z-index:2;
+  }
+  .env-plate .for-label{
+    display:block; font-family:'Poppins',sans-serif; font-size:10px;
+    letter-spacing:4px; color:var(--ink-soft); font-weight:500; margin-bottom:4px;
+  }
+  .env-plate .to-name{
+    display:block; font-family:'Alex Brush', cursive; font-size:30px; color:var(--ink); line-height:1;
+  }
+
+  .tap-hint{
+    margin-top:34px; letter-spacing:3px; font-size:12px; color:var(--ink-soft);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse{ 0%,100%{opacity:.45;} 50%{opacity:1;} }
+
+  /* =========================================================
+     LETTER SCREEN
+     ========================================================= */
+  #letter-screen{
+    position:relative; z-index:2; display:none;
+    min-height:100vh; padding:9vh 5vw 10vh;
+    align-items:flex-start; justify-content:center;
+    opacity:0; transform: translateY(24px);
+    transition: opacity .8s ease, transform .8s ease;
+  }
+  #letter-screen.show{ display:flex; }
+  #letter-screen.visible{ opacity:1; transform:translateY(0); }
+
+  .floral-corner{
+    position:absolute; width:44vw; max-width:230px; aspect-ratio:1/1;
+    pointer-events:none; opacity:0;
+    transition: opacity 1s ease .1s;
+  }
+  .floral-corner.in{ opacity:.85; }
+  .floral-corner svg{ width:100%; height:100%; display:block; overflow:visible; }
+  .floral-corner.tl{ top:-7vw; left:-9vw; }
+  .floral-corner.tr{ top:-7vw; right:-9vw; transform:scaleX(-1); }
+  .floral-corner.bl{ bottom:-8vw; left:-9vw; opacity:0; }
+  .floral-corner.bl.in{ opacity:.55; }
+  .floral-corner.br{ bottom:-8vw; right:-9vw; transform:scaleX(-1); }
+  .floral-corner.br.in{ opacity:.55; }
+
+  .letter-card{
+    position:relative; z-index:2; width:100%; max-width:520px;
+    background: var(--paper);
+    background-image: radial-gradient(rgba(160,120,110,.05) 1px, transparent 1px);
+    background-size:7px 7px;
+    border:1px solid var(--paper-edge);
+    border-radius:4px;
+    box-shadow: var(--shadow);
+    padding:44px 34px 40px;
+  }
+
+  .ornament-line{ position:relative; height:1px; background:transparent; border-top:1px dashed #d9bfa8; margin:0 auto 26px; }
+  .ornament-line .diamond{
+    position:absolute; left:50%; top:0; width:9px; height:9px; background:var(--gold);
+    transform:translate(-50%,-50%) rotate(45deg); box-shadow:0 0 0 4px var(--paper);
+  }
+  .ornament-line.bottom{ margin:30px auto 0; }
+  .ornament-line.bottom .circle{
+    position:absolute; left:50%; top:0; width:7px; height:7px; border-radius:50%;
+    border:1.5px solid var(--gold-dim); transform:translate(-50%,-50%); box-shadow:0 0 0 4px var(--paper);
+  }
+
+  .letter-title{
+    text-align:center; font-family:'Cormorant Garamond', serif; font-style:italic;
+    font-weight:500; font-size:clamp(30px,7vw,42px); margin:0 0 14px; color:var(--ink);
+    opacity:0; transform:translateY(10px); transition:opacity .7s ease, transform .7s ease;
+  }
+  .letter-title.in{opacity:1; transform:translateY(0);}
+
+  .swirl{ display:block; margin:0 auto 22px; width:min(70%,260px); opacity:0; transition:opacity .8s ease .1s; }
+  .swirl.in{opacity:1;}
+  .swirl svg{ width:100%; display:block; overflow:visible; }
+  .swirl path{ stroke:var(--gold-dim); stroke-width:1.3; fill:none; }
+
+  .letter-date{
+    text-align:center; font-family:'Caveat',cursive; font-size:20px; color:var(--maroon);
+    margin:0 0 26px; letter-spacing:.5px;
+    opacity:0; transition:opacity .6s ease;
+  }
+  .letter-date.in{opacity:1;}
+
+  .letter-dearest{
+    font-family:'Times new roman', cursive; font-size:clamp(30px,7vw,40px); color:var(--ink);
+    margin:0 0 6px; line-height:1;
+    opacity:0; transform:translateY(8px); transition:opacity .6s ease, transform .6s ease;
+  }
+  .letter-dearest.in{opacity:1; transform:translateY(0);}
+  .dearest-rule{ height:1px; background:#cfc2b8; width:78%; margin:0 0 26px; opacity:0; transition:opacity .6s ease .2s; }
+  .dearest-rule.in{opacity:1;}
+
+  .letter-body{
+    font-family:'Playfair Display', cursive; font-size:clamp(18px,4.6vw,21px); line-height:1.85;
+    color:#463a35; white-space:pre-wrap; min-height:2em;
+  }
+  .letter-body .cursor{ display:inline-block; width:2px; background:var(--ink-soft); margin-left:1px;
+    animation: blink 1s steps(1) infinite; }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  .letter-signature{
+    margin-top:30px; text-align:right; opacity:0; transition:opacity .8s ease;
+  }
+  .letter-signature.in{opacity:1;}
+  .letter-signature .closing{ font-family:'Playfair Display',cursive; font-size:19px; color:#463a35; margin:0 0 2px; }
+  .letter-signature .signer{ font-family:'Playfair Display',cursive; font-size:19px; color:#463a35; margin:0 0 10px; }
+  .letter-signature .script{
+    font-family:'Times new roman', cursive; font-size:32px; color:var(--ink); display:inline-block;
+    border-bottom:1px solid #cfc2b8; padding-bottom:4px;
+  }
+
+  .save-btn{
+    display:flex; align-items:center; gap:10px; margin:36px auto 0;
+    background:transparent; border:1px solid var(--gold); color:#8a6a2f;
+    font-family:'Poppins',sans-serif; font-size:12px; letter-spacing:3px; font-weight:500;
+    padding:14px 26px; border-radius:999px; cursor:pointer;
+    opacity:0; transform:translateY(10px); pointer-events:none;
+    transition: opacity .7s ease, transform .7s ease, background .25s ease, color .25s ease;
+  }
+  .save-btn.in{ opacity:1; transform:translateY(0); pointer-events:auto; }
+  .save-btn:hover{ background:var(--gold); color:#fff; }
+  .save-btn svg{ width:14px; height:14px; }
+
+  .foot-space{ height:6vh; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="hearts-bg"></div>
+<div class="floral-bloom" id="floralBloom"></div>
+
+<!-- ============================================================
+     ELEMEN AUDIO (Ganti "lagu1.mp3" & "lagu2.mp3" sesuai file lagu kamu)
+     ============================================================ -->
+<audio id="bgMusic1" src="lagu1.mp3" preload="auto"></audio>
+<audio id="bgMusic2" src="lagu2.mp3" preload="auto"></audio>
+
+<!-- ===================== COVER ===================== -->
+<section id="cover">
+  <div class="envelope-wrap" id="envelopeWrap" role="button" tabindex="0" aria-label="Buka surat">
+    <div class="envelope" id="envelope">
+      <div class="env-body"></div>
+      <div class="env-flap"></div>
+      <div class="wax-seal" id="waxSeal"></div>
+      <div class="env-plate">
+        <span class="for-label" id="forLabel"></span>
+        <span class="to-name" id="toName"></span>
+      </div>
+    </div>
+  </div>
+  <p class="tap-hint">✦ TAP TO OPEN ✦</p>
+</section>
+
+<!-- ===================== LETTER ===================== -->
+<section id="letter-screen">
+  <div class="floral-corner tl"></div>
+  <div class="floral-corner tr"></div>
+  <div class="floral-corner bl"></div>
+  <div class="floral-corner br"></div>
+
+  <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
+    <div class="letter-card" id="letterCard">
+      <div class="ornament-line top"><span class="diamond"></span></div>
+
+      <h1 class="letter-title" id="letterTitle"></h1>
+
+      <div class="swirl" id="swirl">
+        <svg viewBox="0 0 260 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 12 C 60 -6, 90 26, 130 12 S 200 -4, 258 12"/>
+        </svg>
+      </div>
+
+      <p class="letter-date" id="letterDate"></p>
+
+      <h2 class="letter-dearest" id="letterDearest"></h2>
+      <div class="dearest-rule" id="dearestRule"></div>
+
+      <div class="letter-body" id="letterBody"></div>
+
+      <div class="letter-signature" id="letterSignature">
+        <p class="closing" id="closingText"></p>
+        <p class="signer" id="signerText"></p>
+        <p class="script" id="scriptText"></p>
+      </div>
+
+      <div class="ornament-line bottom"><span class="circle"></span></div>
+    </div>
+
+    <button class="save-btn" id="saveBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      SIMPAN SURAT INI
+    </button>
+    <div class="foot-space"></div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        onerror="this.onerror=null; var s=document.createElement('script'); s.src='https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js'; document.head.appendChild(s);"></script>
+<script>
+  // ---------- fill config into DOM ----------
+  document.getElementById('forLabel').textContent = LETTER_CONFIG.forLabel;
+  document.getElementById('toName').textContent = LETTER_CONFIG.recipient;
+  document.getElementById('letterTitle').textContent = LETTER_CONFIG.letterTitle;
+  document.getElementById('letterDate').textContent = LETTER_CONFIG.date;
+  document.getElementById('letterDearest').textContent = LETTER_CONFIG.dearest;
+  document.getElementById('closingText').textContent = LETTER_CONFIG.closing;
+  document.getElementById('signerText').textContent = LETTER_CONFIG.signer;
+  document.getElementById('scriptText').textContent = LETTER_CONFIG.signature;
+
+  // ---------- ambient floating hearts ----------
+  const heartsBg = document.getElementById('hearts-bg');
+  const HEART_SVG = '<svg viewBox="0 0 32 29" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M23.6 0c-3 0-5.9 1.6-7.6 4.3C14.3 1.6 11.4 0 8.4 0 3.8 0 0 3.8 0 8.6c0 6.3 5.7 11.4 14.3 19l1.7 1.5 1.7-1.5C26.3 20 32 14.9 32 8.6 32 3.8 28.2 0 23.6 0z"/></svg>';
+
+  function spawnHeart(){
+    const h = document.createElement('div');
+    h.className = 'heart';
+    h.innerHTML = HEART_SVG;
+    const size = 10 + Math.random()*16;
+    h.style.width = size + 'px';
+    h.style.height = size + 'px';
+    h.style.left = Math.random()*100 + 'vw';
+    h.style.setProperty('--drift', (Math.random()*60-30) + 'px');
+    h.style.animationDuration = (7 + Math.random()*6) + 's';
+    h.style.opacity = '0';
+    heartsBg.appendChild(h);
+    setTimeout(()=> h.remove(), 14000);
+  }
+  setInterval(spawnHeart, 550);
+  for(let i=0;i<10;i++) setTimeout(spawnHeart, i*300);
+
+  // ---------- fullscreen floral bloom (real petal-shaped flowers, original generated artwork) ----------
+  function rnd(min,max){ return Math.random()*(max-min)+min; }
+  function pick(arr){ return arr[Math.floor(rnd(0,arr.length))]; }
+
+  // one petal silhouette, tip pointing "up" from the flower's own center (0,0)
+  const PETAL_D = "M0,0 C-2.5,-1.8 -2.9,-5.6 0,-7.8 C2.9,-5.6 2.5,-1.8 0,0 Z";
+
+  const PALETTES = [
+    { outer:'#d8607f', mid:'#e98aa4', inner:'#fbe3dd' },   // deep rose
+    { outer:'#e0708f', mid:'#f0a3b8', inner:'#fff3ee' },   // pink
+    { outer:'#c9506f', mid:'#e07a9c', inner:'#f6e0cf' },   // magenta-cream
+    { outer:'#eec9ce', mid:'#f8e2df', inner:'#fffaf6' },   // blush white
+  ];
+
+  function buildFlower(cx,cy,scale,delayMs){
+    const pal = pick(PALETTES);
+    const petals = 6 + Math.floor(rnd(0,3));       // 6-8 outer petals
+    const rot = rnd(0,360);
+
+    let inner = `<g class="bloom-pop" style="animation-delay:${delayMs.toFixed(0)}ms">`;
+    // back layer - outer petals
+    for(let i=0;i<petals;i++){
+      const a = (360/petals)*i;
+      inner += `<path transform="rotate(${a.toFixed(1)})" d="${PETAL_D}" fill="${pal.outer}" opacity=".95"/>`;
+    }
+    // mid layer - offset + smaller
+    for(let i=0;i<petals;i++){
+      const a = (360/petals)*i + (360/petals)/2;
+      inner += `<path transform="rotate(${a.toFixed(1)}) scale(.62)" d="${PETAL_D}" fill="${pal.mid}" opacity=".95"/>`;
+    }
+    // inner layer - small cream/light petals near center
+    const innerPetals = petals - 2;
+    for(let i=0;i<innerPetals;i++){
+      const a = (360/innerPetals)*i + rnd(-8,8);
+      inner += `<path transform="rotate(${a.toFixed(1)}) scale(.32)" d="${PETAL_D}" fill="${pal.inner}" opacity=".95"/>`;
+    }
+    // stamens / center flecks
+    for(let i=0;i<5;i++){
+      inner += `<circle cx="${rnd(-.6,.6).toFixed(2)}" cy="${rnd(-.6,.6).toFixed(2)}" r="${rnd(.35,.55).toFixed(2)}" fill="#dd9a35"/>`;
+    }
+    inner += `</g>`;
+
+    return `<g transform="translate(${cx.toFixed(2)},${cy.toFixed(2)}) scale(${scale.toFixed(2)}) rotate(${rot.toFixed(1)})">${inner}</g>`;
+  }
+
+  function buildLeaf(cx,cy,scale,rot,delayMs){
+    return `<g transform="translate(${cx.toFixed(2)},${cy.toFixed(2)}) rotate(${rot.toFixed(1)}) scale(${scale.toFixed(2)})">
+      <g class="bloom-pop" style="animation-delay:${delayMs.toFixed(0)}ms">
+        <path d="M0,0 C-3.2,-1 -5.4,-3 -5.6,-5.6 C-2.6,-5 -0.3,-2.8 0,0 Z" fill="#9fae82" opacity=".6"/>
+      </g>
+    </g>`;
+  }
+
+  function buildFloralField(){
+    const cols = 6, rows = 11;
+    let flowers = '';
+    for(let r=0;r<rows;r++){
+      for(let c=0;c<cols;c++){
+        const cx = (c/(cols-1))*100 + rnd(-7,7);
+        const cy = (r/(rows-1))*180 + rnd(-9,9);
+        // diagonal sweep so flowers bloom in a wave across the screen, like the video
+        const wave = (r/(rows-1) + c/(cols-1)) * 520;
+        const delay = wave + rnd(0,140);
+        if(Math.random() < .35) flowers += buildLeaf(cx+rnd(-3,3),cy+rnd(-3,3), rnd(1.4,2.2), rnd(0,360), delay);
+        flowers += buildFlower(cx,cy, rnd(2.1,3.4), delay);
+      }
+    }
+    return `<svg viewBox="0 0 100 180" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="180" fill="#fbe4de"/>${flowers}</svg>`;
+  }
+
+  document.getElementById('floralBloom').innerHTML = buildFloralField();
+
+  // small static flower clusters that sit behind the letter card in each corner
+  function buildCornerCluster(){
+    let g = '';
+    const spots = [
+      {x:78,y:80,s:3.4},{x:55,y:60,s:2.6},{x:88,y:50,s:2.2},
+      {x:60,y:92,s:2.1},{x:35,y:78,s:1.8}
+    ];
+    spots.forEach((sp,i)=>{
+      if(Math.random()<.5) g += buildLeaf(sp.x+rnd(-4,4), sp.y+rnd(-4,4), rnd(1.3,1.9), rnd(0,360), 0);
+      g += buildFlower(sp.x, sp.y, sp.s, 0);
+    });
+    return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">${g}</svg>`;
+  }
+  document.querySelectorAll('.floral-corner').forEach(el=>{
+    el.innerHTML = buildCornerCluster();
+  });
+
+  // ---------- PEMUTARAN LAGU OTOMATIS ----------
+  const audio1 = document.getElementById('bgMusic1');
+  const audio2 = document.getElementById('bgMusic2');
+
+  function startMusic() {
+    audio1.play().catch(e => console.log("Audio 1 play error:", e));
+
+    audio1.onended = function() {
+      audio2.play().catch(e => console.log("Audio 2 play error:", e));
+    };
+
+    audio2.onended = function() {
+      audio1.play().catch(e => console.log("Audio 1 loop error:", e));
+    };
+  }
+
+  // ---------- envelope open -> floral bloom -> letter reveal ----------
+  const envelopeWrap = document.getElementById('envelopeWrap');
+  const envelope = document.getElementById('envelope');
+  const cover = document.getElementById('cover');
+  const letterScreen = document.getElementById('letter-screen');
+  const floralBloom = document.getElementById('floralBloom');
+
+  function openLetter(){
+    if(envelope.classList.contains('open')) return;
+    envelope.classList.add('open');
+
+    // Mulaikan lagu tepat saat amplop diklik
+    startMusic();
+
+    // 1) envelope flap opens, cover fades away
+    setTimeout(()=>{ cover.classList.add('leaving'); }, 550);
+
+    // 2) cover hidden, fullscreen flowers bloom in
+    setTimeout(()=>{
+      cover.style.display = 'none';
+      floralBloom.style.display = 'block';
+      requestAnimationFrame(()=> floralBloom.classList.add('bloom-in'));
+
+      // prepare letter screen underneath while flowers cover it
+      letterScreen.classList.add('show');
+      requestAnimationFrame(()=> letterScreen.classList.add('visible'));
+    }, 1250);
+
+    // 3) hold the fully-bloomed field for a beat, then fade it out to reveal the letter
+    const BLOOM_HOLD = 1250 + 1900 + 500;
+    setTimeout(()=>{
+      floralBloom.classList.remove('bloom-in');
+      floralBloom.classList.add('bloom-out');
+    }, BLOOM_HOLD);
+
+    // 4) flowers fully gone -> start the letter's own reveal sequence
+    setTimeout(()=>{
+      floralBloom.style.display = 'none';
+      window.scrollTo(0,0);
+      document.querySelectorAll('.floral-corner').forEach(el=> el.classList.add('in'));
+      runLetterSequence();
+    }, BLOOM_HOLD + 800);
+  }
+  envelopeWrap.addEventListener('click', openLetter);
+  envelopeWrap.addEventListener('keypress', (e)=>{ if(e.key==='Enter' || e.key===' ') openLetter(); });
+
+  // ---------- sequential reveal + typewriter ----------
+  function runLetterSequence(){
+    const seq = [
+      ['#letterTitle','in',300],
+      ['#swirl','in',300],
+      ['#letterDate','in',300],
+      ['#letterDearest','in',350],
+      ['#dearestRule','in',250],
+    ];
+    let t = 200;
+    seq.forEach(([sel,cls,wait])=>{
+      setTimeout(()=> document.querySelector(sel).classList.add(cls), t);
+      t += wait;
+    });
+    setTimeout(typewriterStart, t + 200);
+  }
+
+  function typewriterStart(){
+    const bodyEl = document.getElementById('letterBody');
+    const fullText = LETTER_CONFIG.paragraphs.join('\n\n');
+    let i = 0;
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    cursor.textContent = '\u00A0';
+
+    function step(){
+      if(i <= fullText.length){
+        bodyEl.textContent = fullText.slice(0,i);
+        bodyEl.appendChild(cursor);
+        i++;
+        const ch = fullText[i-1];
+        const delay = (ch === '.' || ch === ',') ? 90 : (ch === '\n' ? 160 : 22 + Math.random()*22);
+        setTimeout(step, delay);
+      } else {
+        cursor.remove();
+        finishLetter();
+      }
+    }
+    step();
+  }
+
+  function finishLetter(){
+    setTimeout(()=> document.getElementById('letterSignature').classList.add('in'), 250);
+    setTimeout(()=> document.getElementById('saveBtn').classList.add('in'), 700);
+  }
+
+  // ---------- save as image ----------
+  document.getElementById('saveBtn').addEventListener('click', function(){
+    const btn = this;
+    if(typeof html2canvas === 'undefined'){
+      alert('Yah, gagal memuat fitur simpan gambar (perlu koneksi internet). Coba screenshot layar ini secara manual ya \u2764');
+      return;
+    }
+    btn.style.opacity = '.6';
+    html2canvas(document.getElementById('letterCard'), {backgroundColor:'#fdf1ee', scale:2}).then(canvas=>{
+      const link = document.createElement('a');
+      link.download = 'surat-untukmu.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      btn.style.opacity = '1';
+    }).catch(()=>{ btn.style.opacity = '1'; });
+  });
+</script>
+</body>
+</html>
